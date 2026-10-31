@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102a43" />
+  <meta name="description" content="Discover India's sacred temples, traditions, festivals, and pilgrimage experiences." />
+  <title>Sacred India — Temple & Pilgrimage Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    <span class="announcement-dot"></span>
+    Explore India's living heritage — one sacred destination at a time
+    <span class="announcement-right">A guide for mindful journeys <span aria-hidden="true">↗</span></span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Sacred India home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 44 44"><path d="M22 3 27 12H17L22 3Z"/><path d="M12 15h20l-3 5H15l-3-5Z"/><path d="M8 22h28v4H8z"/><path d="M12 29h20v4H12z"/><path d="M17 35h10v5H17z"/><path d="M5 41h34v2H5z"/></svg>
+      </span>
+      <span class="brand-copy"><strong>SACRED INDIA</strong><small>HERITAGE • DEVOTION • DISCOVERY</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="temples.html">Explore Temples</a>
+      <a class="nav-link" href="journeys.html">Pilgrimage Routes</a>
+      <a class="nav-link" href="heritage.html">Our Heritage</a>
+    </nav>
+    <a class="header-cta" href="journeys.html">Plan your visit <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="eyebrow light"><span class="eyebrow-line"></span> INDIA'S SACRED LANDSCAPE</div>
+        <h1>Find your way<br>to <em>something sacred.</em></h1>
+        <p>Discover timeless temples, living traditions, and the stories that connect generations across India.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#explore">Explore destinations <span>↗</span></a>
+          <a class="text-link light-link" href="#heritage">Discover our purpose <span>→</span></a>
+        </div>
+        <div class="hero-footnote"><span class="mini-sun">✳</span> A thoughtful guide to India's spiritual heritage</div>
+      </div>
+      <div class="hero-side-note"><span>01 / 04</span><span class="side-line"></span><span>TIMELESS INDIA</span></div>
+      <div class="hero-bottom">
+        <div><strong>28+</strong><span>States to discover</span></div>
+        <div><strong>Countless</strong><span>Stories and traditions</span></div>
+        <div><strong>One journey</strong><span>Closer to our heritage</span></div>
+      </div>
+    </section>
+
+    <section class="search-section" aria-label="Find a temple">
+      <div class="search-intro">
+        <span class="eyebrow"><span class="eyebrow-line"></span> START YOUR JOURNEY</span>
+        <h2>Where would you<br><em>like to begin?</em></h2>
+      </div>
+      <form class="search-panel" id="searchForm">
+        <label class="search-field">
+          <span class="field-icon">⌕</span>
+          <span class="field-content"><span class="field-label">Search destination</span><input id="searchInput" type="search" placeholder="Temple name, deity, or city" autocomplete="off"></span>
+        </label>
+        <label class="search-field select-field">
+          <span class="field-icon">⌖</span>
+          <span class="field-content"><span class="field-label">Choose a region</span>
+            <select id="stateFilter">
+              <option value="">All regions</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Maharashtra">Maharashtra</option>
+            </select>
+          </span>
+        </label>
+        <button class="button button-navy search-button" type="submit">Find temples <span>→</span></button>
+      </form>
+    </section>
+
+    <section class="section explore-section" id="explore">
+      <div class="section-heading">
+        <div><span class="eyebrow"><span class="eyebrow-line"></span> CURATED FOR YOU</span><h2>Places that hold<br><em>centuries of meaning.</em></h2></div>
+        <p>From grand Dravidian towers to quiet sanctuaries in the mountains, explore places where architecture, faith, and history come together.</p>
+      </div>
+      <div class="filter-row">
+        <div class="filter-chips" id="filterChips" aria-label="Filter temples">
+          <button class="chip active" data-filter="All">All destinations <span>06</span></button>
+          <button class="chip" data-filter="Architecture">Architectural wonders</button>
+          <button class="chip" data-filter="Pilgrimage">Pilgrimage favourites</button>
+          <button class="chip" data-filter="Heritage">Heritage sites</button>
+        </div>
+        <div class="result-count" id="resultCount">Showing 6 destinations</div>
+      </div>
+      <div class="temple-grid" id="templeGrid">
+        <article class="temple-card" data-name="meenakshi amman temple" data-city="madurai" data-state="Tamil Nadu" data-deity="Meenakshi Sundareshwar" data-categories="Architecture Heritage">
+          <div class="card-image-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Meenakshi_Temple%2C_Gopuram%2C_Madurai%2C_India.jpg/960px-Meenakshi_Temple%2C_Gopuram%2C_Madurai%2C_India.jpg" alt="Ornate South Indian temple architecture" loading="lazy"><span class="card-badge">ARCHITECTURE</span><button class="save-button" aria-label="Save Meenakshi Amman Temple" data-save="meenakshi">♡</button></div>
+          <div class="card-body"><div class="card-location">⌖ MADURAI, TAMIL NADU</div><h3>Meenakshi Amman Temple</h3><p>A magnificent temple complex celebrated for its towering gopurams, sculptural detail, and vibrant traditions.</p><div class="card-meta"><span>◷ Darshan details</span><button class="card-link" data-detail="meenakshi">Explore temple <span>↗</span></button></div></div>
+        </article>
+        <article class="temple-card" data-name="kashi vishwanath temple" data-city="varanasi" data-state="Uttar Pradesh" data-deity="Lord Shiva" data-categories="Pilgrimage Heritage">
+          <div class="card-image-wrap"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/View_of_the_ghats_at_Varanasi.jpg/960px-View_of_the_ghats_at_Varanasi.jpg" alt="Sacred ghats and temples along the Ganges in Varanasi" loading="lazy"><span class="card-badge">PILGRIMAGE</span><button class="save-button" aria-label="Save Kashi Vishwanath Temple" data-save="kashi">♡</button></div>
+          <div class="card-body"><div class="card-location">⌖ VARANASI, UTTAR PRADESH</div><h3>Kashi Vishwanath Temple</h3><p>One of Hinduism's most revered Shiva shrines, set in the ancient spiritual heart of Varanasi.</p><div class="card-meta"><span>◷ Darshan details</span><button class="card-link" data-detail="kashi">Explore temple <span>↗</span></button></div></div>
+        </article>
+        <article class="temple-card" data-name="jagannath temple" data-city="puri" data-state="Odisha" data-deity="Lord Jagannath" data-categories="Pilgrimage Architecture">
+          <div class="card-image-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Jagannath_Temple_Puri.jpg/960px-Jagannath_Temple_Puri.jpg" alt="Historic temple tower in India" loading="lazy"><span class="card-badge">LIVING TRADITION</span><button class="save-button" aria-label="Save Jagannath Temple" data-save="jagannath">♡</button></div>
+          <div class="card-body"><div class="card-location">⌖ PURI, ODISHA</div><h3>Jagannath Temple</h3><p>A sacred destination known for its distinctive rituals and the world-famous annual Rath Yatra.</p><div class="card-meta"><span>◷ Darshan details</span><button class="card-link" data-detail="jagannath">Explore temple <span>↗</span></button></div></div>
+        </article>
+        <article class="temple-card" data-name="tirumala venkateswara temple" data-city="tirupati" data-state="Andhra Pradesh" data-deity="Lord Venkateswara" data-categories="Pilgrimage">
+          <div class="card-image-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Tirumala_Venkateswara_Temple%2C_Tirupati_%2823710086864%29.jpg/960px-Tirumala_Venkateswara_Temple%2C_Tirupati_%2823710086864%29.jpg" alt="Traditional Indian temple with ornate entrance" loading="lazy"><span class="card-badge">PILGRIMAGE</span><button class="save-button" aria-label="Save Tirumala Venkateswara Temple" data-save="tirumala">♡</button></div>
+          <div class="card-body"><div class="card-location">⌖ TIRUMALA, ANDHRA PRADESH</div><h3>Tirumala Venkateswara Temple</h3><p>Set among the Seshachalam Hills, this major pilgrimage centre welcomes devotees throughout the year.</p><div class="card-meta"><span>◷ Darshan details</span><button class="card-link" data-detail="tirumala">Explore temple <span>↗</span></button></div></div>
+        </article>
+        <article class="temple-card" data-name="virupaksha temple" data-city="hampi" data-state="Karnataka" data-deity="Lord Shiva" data-categories="Architecture Heritage">
+          <div class="card-image-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Virupaksha_temple_hampi.jpg/960px-Virupaksha_temple_hampi.jpg" alt="Ancient stone temple architecture" loading="lazy"><span class="card-badge">HERITAGE</span><button class="save-button" aria-label="Save Virupaksha Temple" data-save="virupaksha">♡</button></div>
+          <div class="card-body"><div class="card-location">⌖ HAMPI, KARNATAKA</div><h3>Virupaksha Temple</h3><p>A living place of worship within the remarkable ruins of Vijayanagara, a UNESCO World Heritage landscape.</p><div class="card-meta"><span>◷ Visitor guide</span><button class="card-link" data-detail="virupaksha">Explore temple <span>↗</span></button></div></div>
+        </article>
+        <article class="temple-card" data-name="trimbakeshwar temple" data-city="nashik" data-state="Maharashtra" data-deity="Lord Shiva" data-categories="Pilgrimage Heritage">
+          <div class="card-image-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Trimbakeshwar_temple.jpg/960px-Trimbakeshwar_temple.jpg" alt="Temple nestled near green hills" loading="lazy"><span class="card-badge">SACRED LANDSCAPE</span><button class="save-button" aria-label="Save Trimbakeshwar Temple" data-save="trimbakeshwar">♡</button></div>
+          <div class="card-body"><div class="card-location">⌖ NASHIK, MAHARASHTRA</div><h3>Trimbakeshwar Temple</h3><p>An important Jyotirlinga shrine near the source region of the Godavari River, framed by the Brahmagiri hills.</p><div class="card-meta"><span>◷ Visitor guide</span><button class="card-link" data-detail="trimbakeshwar">Explore temple <span>↗</span></button></div></div>
+        </article>
+      </div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No temples found</h3><p>Try another name, city, or region.</p><button class="button button-navy" id="clearFilters">Clear filters</button></div>
+      <div class="center-action"><button class="button button-outline" id="showAllButton">Explore all destinations <span>→</span></button></div>
+    </section>
+
+    <section class="journey-band" id="journeys">
+      <div class="journey-photo"></div><div class="journey-overlay"></div>
+      <div class="journey-content"><span class="eyebrow light"><span class="eyebrow-line"></span> THE JOURNEY MATTERS</span><h2>More than a destination.<br><em>A journey through time.</em></h2><p>Make your pilgrimage more meaningful with context on traditions, travel routes, local customs, and the places that surround each sacred site.</p><a href="#explore" class="button button-gold">Build your journey <span>↗</span></a></div>
+      <div class="journey-note"><span>TRAVEL WITH RESPECT</span><span class="journey-note-line"></span><span>LEAVE WITH A STORY</span></div>
+    </section>
+
+    <section class="section heritage-section" id="heritage">
+      <div class="heritage-copy"><span class="eyebrow"><span class="eyebrow-line"></span> OUR PURPOSE</span><h2>Preserving the past.<br><em>Guiding the future.</em></h2><p>India's temples are more than places of worship. They are living archives of architecture, art, philosophy, community, and centuries of shared memory.</p><p>Sacred India brings essential visitor information and cultural context together in one thoughtfully organised place, helping every traveller explore with curiosity and respect.</p><a href="#explore" class="text-link dark-link">Discover the collection <span>→</span></a></div>
+      <div class="heritage-visual"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Meenakshi_Temple%2C_Gopuram%2C_Madurai%2C_India.jpg/960px-Meenakshi_Temple%2C_Gopuram%2C_Madurai%2C_India.jpg" alt="Detailed carved temple tower" loading="lazy"><div class="heritage-stamp"><span>✳</span><strong>ROOTED IN<br>HERITAGE</strong><small>INSPIRED BY INDIA</small></div><div class="heritage-caption">TIMELESS CRAFTSMANSHIP <span>—</span> LIVING CULTURE</div></div>
+    </section>
+
+    <section class="newsletter-section">
+      <div><span class="eyebrow light"><span class="eyebrow-line"></span> NOTES FROM SACRED INDIA</span><h2>Let meaningful journeys<br><em>find their way to you.</em></h2></div>
+      <form id="newsletterForm" class="newsletter-form"><label for="emailInput">Occasional stories, festival highlights, and travel inspiration.</label><div class="email-row"><input id="emailInput" type="email" placeholder="Your email address" required><button type="submit" aria-label="Subscribe">Join us <span>→</span></button></div><small id="newsletterMessage">No clutter. Just thoughtful discoveries.</small></form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark"><svg viewBox="0 0 44 44"><path d="M22 3 27 12H17L22 3Z"/><path d="M12 15h20l-3 5H15l-3-5Z"/><path d="M8 22h28v4H8z"/><path d="M12 29h20v4H12z"/><path d="M17 35h10v5H17z"/><path d="M5 41h34v2H5z"/></svg></span><span class="brand-copy"><strong>SACRED INDIA</strong><small>HERITAGE • DEVOTION • DISCOVERY</small></span></a>
+    <p>A thoughtful starting point for exploring India's sacred heritage.</p>
+    <div class="footer-links"><a href="temples.html">Explore</a><a href="journeys.html">Pilgrimage</a><a href="heritage.html">Our purpose</a><a href="#home">Back to top ↑</a></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Sacred India. Student demonstration project.</span><span>Temple timings and visitor rules may change. Confirm with official temple sources before travelling.</span></div>
+    <details class="image-credits"><summary>Photo credits</summary><p><a href="https://commons.wikimedia.org/wiki/File:Meenakshi_Temple,_Gopuram,_Madurai,_India.jpg">Meenakshi — Vyacheslav Argenberg, CC BY 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:View_of_the_ghats_at_Varanasi.jpg">Varanasi — Vimalinarc, CC BY 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Jagannath_Temple_Puri.jpg">Jagannath — Hellohappy, CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Tirumala_Venkateswara_Temple,_Tirupati_(23710086864).jpg">Tirumala — Dinesh Kumar, CC BY-SA 2.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Virupaksha_temple_hampi.jpg">Hampi — Nlgirish, CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Trimbakeshwar_temple.jpg">Trimbakeshwar — Chintuthakur9621, CC BY-SA 4.0</a>. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a></p></details>
+  </footer>
+
+  <dialog class="temple-dialog" id="templeDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close details">×</button>
+    <div class="dialog-image" id="dialogImage"></div>
+    <div class="dialog-content"><span class="eyebrow"><span class="eyebrow-line"></span> TEMPLE GUIDE</span><h2 id="dialogTitle">Temple details</h2><p class="dialog-location" id="dialogLocation"></p><p id="dialogDescription"></p><div class="detail-grid"><div><span>Presiding deity</span><strong id="dialogDeity"></strong></div><div><span>Darshan & timings</span><strong>Check official temple notice</strong></div><div><span>Visitor reminder</span><strong>Follow local customs and dress guidance</strong></div><div><span>Before you travel</span><strong>Confirm schedules during festivals</strong></div></div><p class="dialog-disclaimer">This demo provides general introductory information. Timings, entry rules, and services are not live-verified.</p><button class="button button-navy" id="dialogSave">♡ Save this temple</button></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
